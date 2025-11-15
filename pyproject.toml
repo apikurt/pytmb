@@ -1,0 +1,14 @@
+[project]
+name = "pytmb"
+version = "0.1.0b2"
+description = "An unofficial python client for Barcelona public transport (TMB) API."
+readme = "README.md"
+authors = [
+    { name = "Goktug Alperen Kurt", email = "244225901+apikurt@users.noreply.github.com" },
+]
+requires-python = ">=3.10"
+dependencies = ["pydantic>=2.12.4", "requests>=2.32.5"]
+
+[build-system]
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
