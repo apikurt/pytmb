@@ -49,7 +49,7 @@ class IBusClient:
                 ramp_status=(
                     bus.info.accessibility.ramp_status
                     if bus.info and bus.info.accessibility
-                    else None
+                    else 'Unknown'
                 ),
             )
             for stop in data.stops
