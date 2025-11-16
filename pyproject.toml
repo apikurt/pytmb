@@ -28,3 +28,10 @@ Issues = "https://github.com/apikurt/pytmb/issues"
 [build-system]
 requires = ["uv_build>=0.9.5,<0.10.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["ruff>=0.14.5"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"

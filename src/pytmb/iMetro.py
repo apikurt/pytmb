@@ -15,9 +15,7 @@ class IMetroClient:
         self.__base_url = "https://api.tmb.cat/v1/itransit/metro/"
         self.__default_params = {"app_id": self.__app_id, "app_key": self.__app_key}
 
-    def get_eta(
-        self, station_codes: list[str], line: Optional[str] = None
-    ) -> list[MetroEta]:
+    def get_eta(self, station_codes: list[str], line: Optional[str] = None) -> list[MetroEta]:
         """Get the estimated time of arrival (ETA) for metro trains at a specific station or stations.
 
         Args:
@@ -25,6 +23,8 @@ class IMetroClient:
             line (Optional[str]): The metro line to filter by. Defaults to None and shows all lines.
         Returns:
             list[MetroEta]: List of MetroEta objects containing ETA information.
+
+        Details: https://developer.tmb.cat/api-docs/v1/imetro#tag/Metodes/operation/previsioEstacio
         """
         if not station_codes or len(station_codes) == 0:
             raise ValueError("At least one station code must be provided")

@@ -23,6 +23,8 @@ class IBusClient:
             line (Optional[str]): The bus line to filter by. Defaults to None and shows all lines.
         Returns:
             list[BusEta]: List of BusEta objects containing ETA information.
+
+        Details: https://developer.tmb.cat/api-docs/v1/ibus#tag/Metodes/operation/previsioParada
         """
         endpoint = self.__base_url + f"parades/{stop_code}"
         response = requests.get(endpoint, params=self.__default_params, timeout=10)
@@ -33,11 +35,7 @@ class IBusClient:
         # Show ETA for the specified line only
         if line is not None:
             for stop in data.stops:
-                stop.line_routes = [
-                    route
-                    for route in stop.line_routes
-                    if route.line_name.lower() == line.lower()
-                ]
+                stop.line_routes = [route for route in stop.line_routes if route.line_name.lower() == line.lower()]
 
         return [
             BusEta(
@@ -46,11 +44,7 @@ class IBusClient:
                 destination=route.destination,
                 eta_minutes=(bus.arrival_time - time() * 1000) // 60000,
                 stop_code=stop.stop_code,
-                ramp_status=(
-                    bus.info.accessibility.ramp_status
-                    if bus.info and bus.info.accessibility
-                    else 'Unknown'
-                ),
+                ramp_status=(bus.info.accessibility.ramp_status if bus.info and bus.info.accessibility else "Unknown"),
             )
             for stop in data.stops
             for route in stop.line_routes

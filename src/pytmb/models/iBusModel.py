@@ -30,15 +30,13 @@ class BusInfo(BaseModel):
 class Bus(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
-    arrival_time: int = Field(
-        alias="temps_arribada"
-    )  # epoch milliseconds of predicted arrival
+    arrival_time: int = Field(alias="temps_arribada")  # epoch milliseconds of predicted arrival
     bus_id: int = Field(alias="id_bus")  # unique bus identifier
     info: BusInfo | None = Field(default=None, alias="info_bus")
 
     def __repr__(self):
         return f"Bus(arrival_time={self.arrival_time}, bus_id={self.bus_id}, info={self.info})"
-    
+
     def __str__(self):
         return self.__repr__()
 
@@ -47,9 +45,7 @@ class LineRoute(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     operator_id: int = Field(alias="id_operador")
-    transit_namespace: str = Field(
-        alias="transit_namespace"
-    )  # "bus" (TMB) or "amb" (other AMB operator)
+    transit_namespace: str = Field(alias="transit_namespace")  # "bus" (TMB) or "amb" (other AMB operator)
     line_code: int = Field(alias="codi_linia")
     line_name: str = Field(alias="nom_linia")
     direction_id: int = Field(alias="id_sentit")  # 1 = outbound, 2 = return
@@ -59,7 +55,7 @@ class LineRoute(BaseModel):
 
     def __repr__(self):
         return f"LineRoute(operator_id={self.operator_id}, transit_namespace={self.transit_namespace}, line_code={self.line_code}, line_name={self.line_name}, direction_id={self.direction_id}, route_code={self.route_code}, destination={self.destination}, upcoming_buses={self.upcoming_buses})"
-    
+
     def __str__(self):
         return self.__repr__()
 
@@ -73,7 +69,7 @@ class Stop(BaseModel):
 
     def __repr__(self):
         return f"Stop(stop_code={self.stop_code}, stop_name={self.stop_name}, line_routes={self.line_routes})"
-    
+
     def __str__(self):
         return self.__repr__()
 

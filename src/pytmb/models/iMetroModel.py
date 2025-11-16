@@ -10,9 +10,7 @@ class Train(BaseModel):
     arrival_time: int = Field(alias="temps_arribada")  # epoch milliseconds
 
     def __repr__(self):
-        return (
-            f"Train(service_code={self.service_code}, arrival_time={self.arrival_time})"
-        )
+        return f"Train(service_code={self.service_code}, arrival_time={self.arrival_time})"
 
     def __str__(self):
         return self.__repr__()
@@ -45,9 +43,7 @@ class MetroStation(BaseModel):
     track: int = Field(alias="codi_via")  # 1 or 2
     direction_id: int = Field(alias="id_sentit")  # 1 = outbound, 2 = return
     station_code: int = Field(alias="codi_estacio")
-    line_routes: list[MetroRoute] = Field(
-        default_factory=list, alias="linies_trajectes"
-    )
+    line_routes: list[MetroRoute] = Field(default_factory=list, alias="linies_trajectes")
 
     def __repr__(self):
         return (
@@ -101,7 +97,7 @@ class MetroEta(BaseModel):
 
     line_code: int
     line_name: str
-    line_color: str # hexadecimal color code
+    line_color: str  # hexadecimal color code
     destination: str
     eta_minutes: int
     station_code: int
