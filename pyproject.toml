@@ -1,6 +1,6 @@
 [project]
 name = "pytmb"
-version = "0.1.0b3"
+version = "0.1.1b1"
 description = "An unofficial python client for Barcelona public transport (TMB) API."
 readme = "README.md"
 authors = [
