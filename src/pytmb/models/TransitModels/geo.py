@@ -36,11 +36,19 @@ MultiLineStringCoords = List[LineStringCoords]
 
 
 class Geometry(BaseModel):
+    """GeoJSON geometry for transit entities.
+
+    - Conforms to the GeoJSON standard: entities include a geometry and alphanumeric properties.
+    - Coordinate reference system: EPSG:4326 (WGS84).
+    - Coordinate order is [longitude, latitude].
+    - TMB endpoints in this library use only LineString and MultiLineString.
+    """
+
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     # The geometry objects we receive are either LineString or MultiLineString
     type_: Literal["LineString", "MultiLineString"] = Field(alias="type")
-    # Positions are [lon, lat]; MultiLineString nests lists of LineStrings
+    # Positions are [lon, lat] in EPSG:4326; MultiLineString nests lists of LineStrings
     coordinates: Union[LineStringCoords, MultiLineStringCoords]
 
     def __repr__(self):
@@ -81,9 +89,10 @@ class FeatureCollection(BaseModel, Generic[P]):
     timeStamp: Optional[str] = None
 
     def __repr__(self):
-        return (
-            f"FeatureCollection(totalFeatures={self.totalFeatures}, type={self.type_}, features={len(self.features)})"
-        )
+        preview = [(f.id_, f.geometry.type_) for f in self.features[:3]]
+        more = len(self.features) - 3
+        suffix = f", +{more} more" if more > 0 else ""
+        return f"FeatureCollection(totalFeatures={self.totalFeatures}, type={self.type_}, preview={preview}{suffix})"
 
     def __str__(self):
         return self.__repr__()

@@ -41,7 +41,7 @@ class Bus(BaseModel):
         return self.__repr__()
 
 
-class LineRoute(BaseModel):
+class BusLineRoute(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     operator_id: int = Field(alias="id_operador")
@@ -54,55 +54,55 @@ class LineRoute(BaseModel):
     upcoming_buses: list[Bus] = Field(default_factory=list, alias="propers_busos")
 
     def __repr__(self):
-        return f"LineRoute(operator_id={self.operator_id}, transit_namespace={self.transit_namespace}, line_code={self.line_code}, line_name={self.line_name}, direction_id={self.direction_id}, route_code={self.route_code}, destination={self.destination}, upcoming_buses={self.upcoming_buses})"
+        return f"BusLineRoute(operator_id={self.operator_id}, transit_namespace={self.transit_namespace}, line_code={self.line_code}, line_name={self.line_name}, direction_id={self.direction_id}, route_code={self.route_code}, destination={self.destination}, upcoming_buses={self.upcoming_buses})"
 
     def __str__(self):
         return self.__repr__()
 
 
-class Stop(BaseModel):
+class BusStop(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     stop_code: str = Field(alias="codi_parada")
     stop_name: str = Field(alias="nom_parada")
-    line_routes: list[LineRoute] = Field(default_factory=list, alias="linies_trajectes")
+    line_routes: list[BusLineRoute] = Field(default_factory=list, alias="linies_trajectes")
 
     def __repr__(self):
-        return f"Stop(stop_code={self.stop_code}, stop_name={self.stop_name}, line_routes={self.line_routes})"
+        return f"BusStop(stop_code={self.stop_code}, stop_name={self.stop_name}, line_routes={self.line_routes})"
 
     def __str__(self):
         return self.__repr__()
 
 
-class EtaResponseBus(BaseModel):
+class BusEtaResponse(BaseModel):
     """Response model for the Bus ETA API."""
 
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     timestamp: int  # epoch milliseconds when the query was executed
-    stops: list[Stop] = Field(default_factory=list, alias="parades")
+    stops: list[BusStop] = Field(default_factory=list, alias="parades")
 
     def __repr__(self):
-        return f"EtaResponseBus(timestamp={self.timestamp}, stops={self.stops})"
+        return f"BusEtaResponse(timestamp={self.timestamp}, stops={self.stops})"
 
     def __str__(self):
         return self.__repr__()
 
 
 # other models for the iBusClient methods
-class BusEta(BaseModel):
+class BusEtaInfo(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     line_code: int
     line_name: str
     destination: str
     eta_minutes: int
-    stop_code: int
+    stop_code: str
     ramp_status: str | None = None
 
     def __repr__(self):
         return (
-            f"BusEta(line_code={self.line_code}, line_name={self.line_name}, "
+            f"BusEtaInfo(line_code={self.line_code}, line_name={self.line_name}, "
             f"destination={self.destination}, eta_minutes={self.eta_minutes}, stop_code={self.stop_code}, ramp_status={self.ramp_status})"
         )
 

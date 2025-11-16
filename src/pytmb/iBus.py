@@ -1,9 +1,9 @@
 from time import time
-from typing import Optional
+from typing import Literal, Optional, Union, overload
 
 import requests
 
-from pytmb.models.iBusModel import BusEta, EtaResponseBus
+from pytmb.models.iBusModel import BusEtaInfo, BusEtaResponse
 
 
 class IBusClient:
@@ -15,30 +15,46 @@ class IBusClient:
         self.__base_url = "https://api.tmb.cat/v1/itransit/bus/"
         self.__default_params = {"app_id": self.__app_id, "app_key": self.__app_key}
 
-    def get_eta(self, stop_code: str, line: Optional[str] = None) -> list[BusEta]:
-        """Get the estimated time of arrival (ETA) for buses at a specific stop.
+    @overload
+    def get_eta(
+        self, stop_code: str, line: Optional[str] = None, detail: Literal["summary"] = "summary"
+    ) -> list[BusEtaInfo]: ...
+
+    @overload
+    def get_eta(self, stop_code: str, line: Optional[str] = None, detail: Literal["full"] = ...) -> BusEtaResponse: ...
+
+    def get_eta(
+        self, stop_code: str, line: Optional[str] = None, detail: Literal["summary", "full"] = "summary"
+    ) -> Union[list[BusEtaInfo], BusEtaResponse]:
+        """Retrieve ETA for buses at a stop, with optional line filter.
 
         Args:
-            stop_code (str): The code of the bus stop.
-            line (Optional[str]): The bus line to filter by. Defaults to None and shows all lines.
-        Returns:
-            list[BusEta]: List of BusEta objects containing ETA information.
+            stop_code: Bus stop code (string displayed by TMB).
+            line: Optional line name to filter results (case-insensitive, e.g. "H10").
+            detail: "summary" (default) returns `list[BusEtaInfo]`; "full" returns `BusEtaResponse`.
 
-        Details: https://developer.tmb.cat/api-docs/v1/ibus#tag/Metodes/operation/previsioParada
+        Returns:
+            - When detail="summary": list of `BusEtaInfo` (flattened, ergonomic view).
+            - When detail="full": `BusEtaResponse` (raw typed payload).
+
+        Docs:
+            https://developer.tmb.cat/api-docs/v1/ibus#tag/Metodes/operation/previsioParada
         """
         endpoint = self.__base_url + f"parades/{stop_code}"
         response = requests.get(endpoint, params=self.__default_params, timeout=10)
         response.raise_for_status()
-
-        data = EtaResponseBus.model_validate(response.json())
+        data = BusEtaResponse.model_validate(response.json())
 
         # Show ETA for the specified line only
         if line is not None:
             for stop in data.stops:
                 stop.line_routes = [route for route in stop.line_routes if route.line_name.lower() == line.lower()]
 
+        if detail == "full":
+            return data
+
         return [
-            BusEta(
+            BusEtaInfo(
                 line_code=route.line_code,
                 line_name=route.line_name,
                 destination=route.destination,
@@ -50,3 +66,5 @@ class IBusClient:
             for route in stop.line_routes
             for bus in route.upcoming_buses
         ]
+
+    # (no internal helpers; logic kept inline for simplicity)

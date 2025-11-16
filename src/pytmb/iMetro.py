@@ -1,9 +1,9 @@
 from time import time
-from typing import Optional
+from typing import Literal, Optional, Union, overload
 
 import requests
 
-from pytmb.models.iMetroModel import EtaResponseMetro, MetroEta
+from pytmb.models.iMetroModel import MetroEtaInfo, MetroEtaResponse
 
 
 class IMetroClient:
@@ -15,46 +15,66 @@ class IMetroClient:
         self.__base_url = "https://api.tmb.cat/v1/itransit/metro/"
         self.__default_params = {"app_id": self.__app_id, "app_key": self.__app_key}
 
-    def get_eta(self, station_codes: list[str], line: Optional[str] = None) -> list[MetroEta]:
-        """Get the estimated time of arrival (ETA) for metro trains at a specific station or stations.
+    @overload
+    def get_eta(
+        self, station_codes: list[int], line: Optional[str] = None, detail: Literal["summary"] = "summary"
+    ) -> list[MetroEtaInfo]: ...
+
+    @overload
+    def get_eta(
+        self, station_codes: list[int], line: Optional[str] = None, detail: Literal["full"] = ...
+    ) -> MetroEtaResponse: ...
+
+    def get_eta(
+        self,
+        station_codes: list[int],
+        line: Optional[str] = None,
+        detail: Literal["summary", "full"] = "summary",
+    ) -> Union[list[MetroEtaInfo], MetroEtaResponse]:
+        """Retrieve ETA for metro trains at one or more stations, optionally filtered by line.
 
         Args:
-            station_codes (list[str]): The codes of the metro stations.
-            line (Optional[str]): The metro line to filter by. Defaults to None and shows all lines.
-        Returns:
-            list[MetroEta]: List of MetroEta objects containing ETA information.
+            station_codes: One or more station codes (integers as recorded by TMB).
+            line: Optional line name filter (e.g. "L1"). Non-matching lines are omitted.
+            detail: "summary" (default) returns `list[MetroEtaInfo]`; "full" returns `MetroEtaResponse`.
 
-        Details: https://developer.tmb.cat/api-docs/v1/imetro#tag/Metodes/operation/previsioEstacio
+        Returns:
+            - When detail="summary": list of `MetroEtaInfo` (flattened view across stations/routes).
+            - When detail="full": `MetroEtaResponse` (raw typed payload).
+
+        Docs:
+            https://developer.tmb.cat/api-docs/v1/imetro#tag/Metodes/operation/previsioEstacio
         """
         if not station_codes or len(station_codes) == 0:
             raise ValueError("At least one station code must be provided")
         endpoint = self.__base_url + "estacions"
         response = requests.get(
             endpoint,
-            params={**self.__default_params, "estacions": ",".join(station_codes)},
+            params={**self.__default_params, "estacions": ",".join(str(code) for code in station_codes)},
             timeout=10,
         )
         response.raise_for_status()
-
-        data = EtaResponseMetro.model_validate(response.json())
+        data = MetroEtaResponse.model_validate(response.json())
 
         # Show ETA for the specified line only if provided
         if line is not None:
-            for metro_line in data.lines:
-                if metro_line.line_name.lower() != line.lower():
-                    metro_line.stations = []
+            target = line.strip().lower()
+            data.lines = [ml for ml in data.lines if ml.line_name.lower() == target]
+
+        if detail == "full":
+            return data
 
         return [
-            MetroEta(
-                line_code=line.line_code,
-                line_name=line.line_name,
-                line_color=line.line_color,
+            MetroEtaInfo(
+                line_code=metro_line.line_code,
+                line_name=metro_line.line_name,
+                line_color=metro_line.line_color,
                 destination=route.destination,
                 eta_minutes=((train.arrival_time - int(time() * 1000)) // 60000),
                 station_code=station.station_code,
             )
-            for line in data.lines
-            for station in line.stations
+            for metro_line in data.lines
+            for station in metro_line.stations
             for route in station.line_routes
             for train in route.upcoming_trains
         ]

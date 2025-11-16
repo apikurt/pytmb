@@ -5,10 +5,10 @@ from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from .geo import FeatureCollection
+from pytmb.models.TransitModels.geo import FeatureCollection
 
 
-class TransitLineProperties(BaseModel):
+class LineProperties(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     # Codes and identifiers
@@ -49,7 +49,7 @@ class TransitLineProperties(BaseModel):
 
     def __repr__(self):
         return (
-            f"TransitLineProperties(line_id={self.line_id}, line_code={self.line_code}, "
+            f"LineProperties(line_id={self.line_id}, line_code={self.line_code}, "
             f"line_name={self.line_name}, destination={self.line_destination})"
         )
 
@@ -57,11 +57,11 @@ class TransitLineProperties(BaseModel):
         return self.__repr__()
 
 
-class TransitLinesResponse(FeatureCollection[TransitLineProperties]):
+class LinesResponse(FeatureCollection[LineProperties]):
     pass
 
 
-class TransitLineInfo(BaseModel):
+class LineInfo(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     line_id: int
@@ -75,7 +75,7 @@ class TransitLineInfo(BaseModel):
 
     def __repr__(self):
         return (
-            f"TransitLineInfo(line_id={self.line_id}, line_code={self.line_code}, "
+            f"LineInfo(line_id={self.line_id}, line_code={self.line_code}, "
             f"line_origin={self.line_origin}, line_destination={self.line_destination}, "
             f"line_name={self.line_name}, color={self.color})"
         )

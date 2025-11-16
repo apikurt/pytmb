@@ -4,7 +4,7 @@ from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from .geo import FeatureCollection
+from pytmb.models.TransitModels.geo import FeatureCollection
 
 
 class BusRouteProperties(BaseModel):

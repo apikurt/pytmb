@@ -1,6 +1,11 @@
-from .geo import Crs, CrsProperties, Feature, FeatureCollection, Geometry
-from .lines import TransitLineInfo, TransitLineProperties, TransitLinesResponse
-from .routes import BusRouteProperties, BusRoutesConsolidatedResponse, BusRoutesResponse
+from pytmb.models.TransitModels.geo import Crs, CrsProperties, Feature, FeatureCollection, Geometry
+from pytmb.models.TransitModels.lines import LineInfo, LineProperties, LinesResponse
+from pytmb.models.TransitModels.routes import (
+    BusRouteInfo,
+    BusRouteProperties,
+    BusRoutesConsolidatedResponse,
+    BusRoutesResponse,
+)
 
 __all__ = [
     "Crs",
@@ -8,9 +13,9 @@ __all__ = [
     "Geometry",
     "Feature",
     "FeatureCollection",
-    "TransitLineProperties",
-    "TransitLinesResponse",
-    "TransitLineInfo",
+    "LineProperties",
+    "LinesResponse",
+    "LineInfo",
     "BusRouteProperties",
     "BusRoutesResponse",
     "BusRoutesConsolidatedResponse",

@@ -3,14 +3,14 @@ from __future__ import annotations
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class Train(BaseModel):
+class MetroTrain(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     service_code: str = Field(alias="codi_servei")
     arrival_time: int = Field(alias="temps_arribada")  # epoch milliseconds
 
     def __repr__(self):
-        return f"Train(service_code={self.service_code}, arrival_time={self.arrival_time})"
+        return f"MetroTrain(service_code={self.service_code}, arrival_time={self.arrival_time})"
 
     def __str__(self):
         return self.__repr__()
@@ -24,7 +24,7 @@ class MetroRoute(BaseModel):
     line_color: str = Field(alias="color_linia")
     route_code: str = Field(alias="codi_trajecte")
     destination: str = Field(alias="desti_trajecte")
-    upcoming_trains: list[Train] = Field(default_factory=list, alias="propers_trens")
+    upcoming_trains: list[MetroTrain] = Field(default_factory=list, alias="propers_trens")
 
     def __repr__(self):
         return (
@@ -76,7 +76,7 @@ class MetroLine(BaseModel):
         return self.__repr__()
 
 
-class EtaResponseMetro(BaseModel):
+class MetroEtaResponse(BaseModel):
     """Response model for the Metro ETA API."""
 
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -85,14 +85,14 @@ class EtaResponseMetro(BaseModel):
     lines: list[MetroLine] = Field(default_factory=list, alias="linies")
 
     def __repr__(self):
-        return f"EtaResponseMetro(timestamp={self.timestamp}, lines={self.lines})"
+        return f"MetroEtaResponse(timestamp={self.timestamp}, lines={self.lines})"
 
     def __str__(self):
         return self.__repr__()
 
 
 # other models for the iMetroClient methods
-class MetroEta(BaseModel):
+class MetroEtaInfo(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
 
     line_code: int
@@ -104,7 +104,7 @@ class MetroEta(BaseModel):
 
     def __repr__(self):
         return (
-            f"MetroEta(line_code={self.line_code}, line_name={self.line_name}, "
+            f"MetroEtaInfo(line_code={self.line_code}, line_name={self.line_name}, "
             f"line_color={self.line_color}, destination={self.destination}, eta_minutes={self.eta_minutes}, station_code={self.station_code})"
         )
 
