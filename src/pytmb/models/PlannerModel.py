@@ -19,6 +19,10 @@ class Place(BaseModel):
     def __repr__(self) -> str:
         return f"Place(name={self.name}, lat={self.lat}, lon={self.lon})"
 
+    def __str__(self) -> str:
+        label = self.name if self.name else "Unnamed"
+        return f"{label} ({self.lat:.5f},{self.lon:.5f})"
+
 
 class LegGeometry(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -44,6 +48,16 @@ class Step(BaseModel):
     alerts: Optional[List[Dict[str, Any]]] = None
     # OTP returns elevation profile as a comma-separated string; keep raw
     elevation: Optional[str] = None
+
+    def __str__(self) -> str:
+        parts = []
+        if self.relative_direction:
+            parts.append(self.relative_direction)
+        if self.street_name:
+            parts.append(self.street_name)
+        base = " ".join(parts) if parts else "Step"
+        dist = f"{self.distance:.0f}m" if self.distance is not None else "?m"
+        return f"{base} {dist}"
 
 
 class Leg(BaseModel):
@@ -91,6 +105,13 @@ class Leg(BaseModel):
     rented_bike: Optional[bool] = Field(default=None, alias="rentedBike")
     duration: Optional[int] = None
 
+    def __str__(self) -> str:
+        from_label = self.from_.name or f"{self.from_.lat:.5f},{self.from_.lon:.5f}"
+        to_label = self.to.name or f"{self.to.lat:.5f},{self.to.lon:.5f}"
+        dist = f"{self.distance:.0f}m"
+        dur_min = f"{(self.duration or 0)/60000:.1f}min" if self.duration else "?min"
+        return f"Leg {self.mode} {from_label}->{to_label} {dist} {dur_min}"
+
 
 class Itinerary(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -113,6 +134,12 @@ class Itinerary(BaseModel):
     legs: List[Leg]
     too_sloped: Optional[bool] = Field(default=None, alias="tooSloped")
 
+    def __str__(self) -> str:
+        dur_min = f"{self.duration/60000:.1f}min"
+        legs_count = len(self.legs)
+        transfers = self.transfers if self.transfers is not None else 0
+        return f"Itinerary {dur_min} legs={legs_count} transfers={transfers}"
+
 
 class Plan(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -121,6 +148,9 @@ class Plan(BaseModel):
     from_: Place = Field(alias="from")
     to: Place
     itineraries: List[Itinerary]
+
+    def __str__(self) -> str:
+        return f"Plan itineraries={len(self.itineraries)} from={self.from_} to={self.to}"
 
 
 class PlannerError(BaseModel):
@@ -159,6 +189,14 @@ class PlannerResponse(BaseModel):
             itin_count = 0
         return f"PlannerResponse(plan_itineraries={itin_count}, error={self.error})"
 
+    def __str__(self) -> str:
+        if self.error:
+            msg = self.error.message or self.error.msg or "Unknown error"
+            return f"PlannerResponse ERROR: {msg}"
+        if self.plan and self.plan.itineraries:
+            return f"PlannerResponse itineraries={len(self.plan.itineraries)}"
+        return "PlannerResponse empty"
+
 
 class PlannerRouteInfo(BaseModel):
     model_config = ConfigDict(extra="ignore", populate_by_name=True)
@@ -177,3 +215,6 @@ class PlannerRouteInfo(BaseModel):
             f"PlannerRouteInfo(overview={self.overview!r}, duration_in_minutes={self.duration_in_minutes}, "
             f"transfers={self.transfers})"
         )
+
+    def __str__(self) -> str:
+        return f"Route {self.overview}: {self.duration_in_minutes} min transfers={self.transfers}"

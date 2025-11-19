@@ -13,7 +13,7 @@ class MetroTrain(BaseModel):
         return f"MetroTrain(service_code={self.service_code}, arrival_time={self.arrival_time})"
 
     def __str__(self):
-        return self.__repr__()
+        return f"Train service={self.service_code} arrival_epoch_ms={self.arrival_time}"
 
 
 class MetroRoute(BaseModel):
@@ -34,7 +34,9 @@ class MetroRoute(BaseModel):
         )
 
     def __str__(self):
-        return self.__repr__()
+        return (
+            f"Route {self.line_code} {self.line_name} dest={self.destination} trains={len(self.upcoming_trains)}"
+        )
 
 
 class MetroStation(BaseModel):
@@ -52,7 +54,9 @@ class MetroStation(BaseModel):
         )
 
     def __str__(self):
-        return self.__repr__()
+        return (
+            f"Station {self.station_code} track={self.track} dir={self.direction_id} routes={len(self.line_routes)}"
+        )
 
 
 class MetroLine(BaseModel):
@@ -73,7 +77,9 @@ class MetroLine(BaseModel):
         )
 
     def __str__(self):
-        return self.__repr__()
+        return (
+            f"Line {self.line_code} {self.line_name} stations={len(self.stations)} color={self.line_color}"
+        )
 
 
 class MetroEtaResponse(BaseModel):
@@ -88,7 +94,7 @@ class MetroEtaResponse(BaseModel):
         return f"MetroEtaResponse(timestamp={self.timestamp}, lines={self.lines})"
 
     def __str__(self):
-        return self.__repr__()
+        return f"MetroEtaResponse timestamp={self.timestamp} lines={len(self.lines)}"
 
 
 # other models for the iMetroClient methods
@@ -109,4 +115,6 @@ class MetroEtaInfo(BaseModel):
         )
 
     def __str__(self):
-        return self.__repr__()
+        return (
+            f"Metro {self.line_name} ({self.line_code}) to {self.destination}: {self.eta_minutes} min station={self.station_code}"
+        )

@@ -1,5 +1,14 @@
 # PyTMB
 
+<p align="left">
+	<a href="https://pypi.org/project/pytmb/"><img src="https://img.shields.io/pypi/v/pytmb.svg?label=PyPI&color=3776AB" alt="PyPI version"></a>
+	<a href="https://img.shields.io/pypi/dm/pytmb"><img src="https://img.shields.io/pypi/dm/pytmb?label=Downloads" alt="Monthly downloads"></a>
+	<a href="https://github.com/apikurt/pytmb/blob/main/LICENSE"><img src="https://img.shields.io/github/license/apikurt/pytmb.svg?label=License" alt="License"></a>
+	<a href="https://pypi.org/project/pytmb/"><img src="https://img.shields.io/badge/type%20hints-yes-success" alt="Type hints"></a>
+	<a href="https://github.com/apikurt/pytmb/actions/workflows/release.yml"><img src="https://github.com/apikurt/pytmb/actions/workflows/release.yml/badge.svg" alt="Build status"></a>
+	<a href="https://github.com/apikurt/pytmb"><img src="https://img.shields.io/github/last-commit/apikurt/pytmb.svg?label=Last%20commit" alt="Last commit"></a>
+</p>
+
 Unofficial Python client for the Barcelona public transport (TMB) API.
 
 > This library is not affiliated with TMB. Use responsibly and respect the API Terms of Service.
