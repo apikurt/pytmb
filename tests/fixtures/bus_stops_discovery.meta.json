@@ -1,0 +1,22 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T09:38:57.530705+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "transit/linies/bus/23/parades",
+  "query": {
+    "filter": "ID_SENTIT=1",
+    "srsName": "EPSG:4326"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Fri, 16 Oct 2026 09:38:56 GMT"
+  },
+  "payload_file": "bus_stops_discovery.json",
+  "model": null,
+  "outcome": "success",
+  "note": "Discovery-only public line 23 stop codes for TMB-operated predictions",
+  "initial_model_validation": null,
+  "redacted_paths": []
+}

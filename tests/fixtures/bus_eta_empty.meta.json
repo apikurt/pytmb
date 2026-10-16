@@ -1,0 +1,22 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:20:47.859782+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "itransit/bus/parades/2775",
+  "query": {},
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 01:20:47 GMT"
+  },
+  "payload_file": "bus_eta_empty.json",
+  "model": "bus_eta",
+  "outcome": "success",
+  "note": "Public stop 2775 returned a successful empty stop list during the overnight capture",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

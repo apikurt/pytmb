@@ -1,0 +1,26 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:26:11.968685+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "planner/plan",
+  "query": {
+    "fromPlace": "41.3755204,2.1498870",
+    "toPlace": "41.403629,2.174356",
+    "date": "10-16-2026",
+    "time": "12:00pm",
+    "arriveBy": "false",
+    "mode": "INVALID"
+  },
+  "status_code": 500,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 01:26:11 GMT"
+  },
+  "payload_file": "planner_invalid_mode.json",
+  "model": "planner",
+  "outcome": "http_error",
+  "note": "Intentionally unsupported routing mode to record the real API validation error contract",
+  "initial_model_validation": null,
+  "redacted_paths": []
+}

@@ -1,0 +1,337 @@
+{
+  "timestamp": 1792143536572,
+  "parades": [
+    {
+      "codi_parada": "108",
+      "nom_parada": "Pl Espanya - FGC",
+      "linies_trajectes": [
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L72",
+          "nom_linia": "L72",
+          "id_sentit": 1,
+          "codi_trajecte": "L72-St. Boi L.",
+          "desti_trajecte": "St. Boi L.",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143606000
+            },
+            {
+              "temps_arribada": 1792144888000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "X70",
+          "nom_linia": "X70",
+          "id_sentit": 1,
+          "codi_trajecte": "X70-St. Boi L.",
+          "desti_trajecte": "St. Boi L.",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143645000
+            },
+            {
+              "temps_arribada": 1792144880000
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 65,
+          "nom_linia": "65",
+          "id_sentit": 1,
+          "codi_trajecte": "0650",
+          "desti_trajecte": "El Prat",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143654000,
+              "id_bus": 4621,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            },
+            {
+              "temps_arribada": 1792144554000,
+              "id_bus": 1801,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "X86",
+          "nom_linia": "X86",
+          "id_sentit": 1,
+          "codi_trajecte": "X86-Viladecans",
+          "desti_trajecte": "Viladecans",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143710000
+            },
+            {
+              "temps_arribada": 1792144603000
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 109,
+          "nom_linia": "109",
+          "id_sentit": 1,
+          "codi_trajecte": "1090",
+          "desti_trajecte": "Polígon Zona Franca",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143739000,
+              "id_bus": 1418,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            },
+            {
+              "temps_arribada": 1792144751000,
+              "id_bus": 1829,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 212,
+          "nom_linia": "H12",
+          "id_sentit": 2,
+          "codi_trajecte": "2121",
+          "desti_trajecte": "Gornal",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143835000,
+              "id_bus": 8531,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            },
+            {
+              "temps_arribada": 1792144316000,
+              "id_bus": 8570,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 46,
+          "nom_linia": "46",
+          "id_sentit": 1,
+          "codi_trajecte": "0460",
+          "desti_trajecte": "Aeroport BCN",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143918000,
+              "id_bus": 1910,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            },
+            {
+              "temps_arribada": 1792144698000,
+              "id_bus": 1568,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L86",
+          "nom_linia": "L86",
+          "id_sentit": 1,
+          "codi_trajecte": "L86-Viladecans",
+          "desti_trajecte": "Viladecans",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792143982000
+            },
+            {
+              "temps_arribada": 1792144971000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "X80",
+          "nom_linia": "X80",
+          "id_sentit": 1,
+          "codi_trajecte": "X80-Gavà",
+          "desti_trajecte": "Gavà",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144014000
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 216,
+          "nom_linia": "H16",
+          "id_sentit": 2,
+          "codi_trajecte": "2161",
+          "desti_trajecte": "Pg. Zona Franca",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144028000,
+              "id_bus": 8547,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L94",
+          "nom_linia": "L94",
+          "id_sentit": 1,
+          "codi_trajecte": "L94-Castelldefels",
+          "desti_trajecte": "Castelldefels",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144091000
+            },
+            {
+              "temps_arribada": 1792145749000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L95",
+          "nom_linia": "L95",
+          "id_sentit": 1,
+          "codi_trajecte": "L95-Castelldefels",
+          "desti_trajecte": "Castelldefels",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144150000
+            },
+            {
+              "temps_arribada": 1792145503000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L80",
+          "nom_linia": "L80",
+          "id_sentit": 1,
+          "codi_trajecte": "L80-Gavà",
+          "desti_trajecte": "Gavà",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144303000
+            },
+            {
+              "temps_arribada": 1792144954000
+            }
+          ]
+        },
+        {
+          "id_operador": 2,
+          "transit_namespace": "bus",
+          "codi_linia": 244,
+          "nom_linia": "X2",
+          "id_sentit": 1,
+          "codi_trajecte": "2440",
+          "desti_trajecte": "X2-Prat Xpres (Av. Remolar)",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144320000,
+              "id_bus": 4654,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            },
+            {
+              "temps_arribada": 1792145820000,
+              "id_bus": 4655,
+              "info_bus": {
+                "accessibilitat": {
+                  "estat_rampa": "SENSE_INCIDENCIA"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L70",
+          "nom_linia": "L70",
+          "id_sentit": 1,
+          "codi_trajecte": "L70-St. Boi L.",
+          "desti_trajecte": "St. Boi L.",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792144633000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "X95",
+          "nom_linia": "X95",
+          "id_sentit": 1,
+          "codi_trajecte": "X95-Castelldefels",
+          "desti_trajecte": "Castelldefels",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792145181000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

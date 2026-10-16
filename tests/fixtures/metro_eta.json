@@ -1,0 +1,38 @@
+{
+  "timestamp": 1792113742103,
+  "linies": [
+    {
+      "codi_linia": 1,
+      "nom_linia": "L1",
+      "nom_familia": "Metro",
+      "codi_familia": 1,
+      "color_linia": "CE1126",
+      "estacions": [
+        {
+          "codi_via": 1,
+          "id_sentit": 1,
+          "codi_estacio": 115,
+          "linies_trajectes": []
+        },
+        {
+          "codi_via": 2,
+          "id_sentit": 2,
+          "codi_estacio": 115,
+          "linies_trajectes": []
+        },
+        {
+          "codi_via": 1,
+          "id_sentit": 1,
+          "codi_estacio": 123,
+          "linies_trajectes": []
+        },
+        {
+          "codi_via": 2,
+          "id_sentit": 2,
+          "codi_estacio": 123,
+          "linies_trajectes": []
+        }
+      ]
+    }
+  ]
+}

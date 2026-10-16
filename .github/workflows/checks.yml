@@ -1,0 +1,98 @@
+name: Checks
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Python ${{ matrix.python-version }} (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+        include:
+          - os: windows-latest
+            python-version: "3.10"
+          - os: windows-latest
+            python-version: "3.14"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.19"
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+      - name: Install locked dependencies
+        run: uv sync --locked
+      - name: Run offline tests
+        run: uv run --locked pytest -q
+
+  quality:
+    name: Lint and types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.19"
+          python-version: "3.14"
+          enable-cache: true
+      - name: Install locked dependencies
+        run: uv sync --locked
+      - name: Lint
+        run: uv run --locked ruff check src tests
+      - name: Type check
+        run: uv run --locked mypy
+
+  package:
+    name: Build and test distributions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "0.12.19"
+          python-version: "3.14"
+          enable-cache: true
+      - name: Build distributions
+        run: uv build --no-sources
+      - name: Test installed wheel
+        run: >-
+          EXPECTED_VERSION="$(uv version --short)"
+          uv run --isolated --no-project --with dist/*.whl python -I -c
+          "import os; from importlib.metadata import version; from importlib.resources import files;
+          from pytmb import TMBClient, BusClient, MetroClient, PlannerClient, TransitClient;
+          from pytmb.models import BusEtaResponse, MetroEtaResponse, PlannerResponse, Geometry;
+          from pytmb.summaries import summarize_bus, summarize_metro, summarize_plan;
+          assert version('pytmb') == os.environ['EXPECTED_VERSION'];
+          assert files('pytmb').joinpath('py.typed').is_file()"
+      - name: Test installed source distribution
+        run: >-
+          EXPECTED_VERSION="$(uv version --short)"
+          uv run --isolated --no-project --with dist/*.tar.gz python -I -c
+          "import os; from importlib.metadata import version; from importlib.resources import files;
+          from pytmb import TMBClient, BusClient, MetroClient, PlannerClient, TransitClient;
+          from pytmb.models import BusEtaResponse, MetroEtaResponse, PlannerResponse, Geometry;
+          from pytmb.summaries import summarize_bus, summarize_metro, summarize_plan;
+          assert version('pytmb') == os.environ['EXPECTED_VERSION'];
+          assert files('pytmb').joinpath('py.typed').is_file()"
+      - name: Upload tested distributions
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error

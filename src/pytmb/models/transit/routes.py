@@ -2,14 +2,13 @@ from __future__ import annotations
 
 from typing import Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
 
-from pytmb.models.TransitModels.geo import FeatureCollection
+from pytmb.models._base import DomainModel, ResponseModel
+from pytmb.models.transit.geo import FeatureCollection
 
 
-class BusRouteProperties(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class BusRouteProperties(ResponseModel):
     route_id: int = Field(alias="ID_RECORREGUT")
     line_id: int = Field(alias="ID_LINIA")
     line_code: int = Field(alias="CODI_LINIA")
@@ -71,9 +70,7 @@ class BusRoutesConsolidatedResponse(FeatureCollection[BusRouteProperties]):
     pass
 
 
-class BusRouteInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class BusRouteInfo(DomainModel):
     route_id: int
     line_code: int
     origin_name: str

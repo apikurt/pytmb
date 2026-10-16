@@ -1,0 +1,21 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:20:47.938229+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "transit/linies/metro/1/estacions",
+  "query": {
+    "srsName": "EPSG:4326"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Fri, 16 Oct 2026 01:20:47 GMT"
+  },
+  "payload_file": "metro_stations_discovery.json",
+  "model": null,
+  "outcome": "success",
+  "note": "Discovery-only capture of public L1 station codes for the prediction fixture",
+  "initial_model_validation": null,
+  "redacted_paths": []
+}

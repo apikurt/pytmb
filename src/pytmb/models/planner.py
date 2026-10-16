@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
+
+from pytmb.models._base import ResponseModel
 
 
-class Place(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Place(ResponseModel):
     name: Optional[str] = None
     lat: float
     lon: float
@@ -24,16 +24,12 @@ class Place(BaseModel):
         return f"{label} ({self.lat:.5f},{self.lon:.5f})"
 
 
-class LegGeometry(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class LegGeometry(ResponseModel):
     points: str
     length: int
 
 
-class Step(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Step(ResponseModel):
     # Distance can be fractional (meters), so use float
     distance: Optional[float] = None
     relative_direction: Optional[str] = Field(default=None, alias="relativeDirection")
@@ -60,9 +56,7 @@ class Step(BaseModel):
         return f"{base} {dist}"
 
 
-class Leg(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Leg(ResponseModel):
     mode: str
     start_time: int = Field(alias="startTime")
     end_time: int = Field(alias="endTime")
@@ -109,13 +103,11 @@ class Leg(BaseModel):
         from_label = self.from_.name or f"{self.from_.lat:.5f},{self.from_.lon:.5f}"
         to_label = self.to.name or f"{self.to.lat:.5f},{self.to.lon:.5f}"
         dist = f"{self.distance:.0f}m"
-        dur_min = f"{(self.duration or 0)/60000:.1f}min" if self.duration else "?min"
+        dur_min = f"{self.duration / 60:.1f}min" if self.duration is not None else "?min"
         return f"Leg {self.mode} {from_label}->{to_label} {dist} {dur_min}"
 
 
-class Itinerary(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Itinerary(ResponseModel):
     duration: int
     start_time: int = Field(alias="startTime")
     end_time: int = Field(alias="endTime")
@@ -135,15 +127,13 @@ class Itinerary(BaseModel):
     too_sloped: Optional[bool] = Field(default=None, alias="tooSloped")
 
     def __str__(self) -> str:
-        dur_min = f"{self.duration/60000:.1f}min"
+        dur_min = f"{self.duration / 60:.1f}min"
         legs_count = len(self.legs)
-        transfers = self.transfers if self.transfers is not None else 0
+        transfers = str(self.transfers) if self.transfers is not None else "?"
         return f"Itinerary {dur_min} legs={legs_count} transfers={transfers}"
 
 
-class Plan(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Plan(ResponseModel):
     date: int
     from_: Place = Field(alias="from")
     to: Place
@@ -153,9 +143,7 @@ class Plan(BaseModel):
         return f"Plan itineraries={len(self.itineraries)} from={self.from_} to={self.to}"
 
 
-class PlannerError(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class PlannerError(ResponseModel):
     id: Optional[int] = None
     msg: Optional[str] = None
     message: Optional[str] = None
@@ -163,9 +151,7 @@ class PlannerError(BaseModel):
     no_path: Optional[bool] = Field(default=None, alias="noPath")
 
 
-class DebugOutput(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class DebugOutput(ResponseModel):
     precalculation_time: Optional[int] = Field(default=None, alias="precalculationTime")
     path_calculation_time: Optional[int] = Field(default=None, alias="pathCalculationTime")
     path_times: Optional[List[int]] = Field(default=None, alias="pathTimes")
@@ -174,9 +160,7 @@ class DebugOutput(BaseModel):
     timed_out: Optional[bool] = Field(default=None, alias="timedOut")
 
 
-class PlannerResponse(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class PlannerResponse(ResponseModel):
     plan: Optional[Plan] = None
     error: Optional[PlannerError] = None
     request_parameters: Optional[Dict[str, str]] = Field(default=None, alias="requestParameters")
@@ -196,25 +180,3 @@ class PlannerResponse(BaseModel):
         if self.plan and self.plan.itineraries:
             return f"PlannerResponse itineraries={len(self.plan.itineraries)}"
         return "PlannerResponse empty"
-
-
-class PlannerRouteInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
-    overview: str
-    description: str
-    duration_in_minutes: int
-    duration_in_seconds: int
-    transit_time: int
-    waiting_time: int
-    walk_distance: int
-    transfers: int
-
-    def __repr__(self) -> str:
-        return (
-            f"PlannerRouteInfo(overview={self.overview!r}, duration_in_minutes={self.duration_in_minutes}, "
-            f"transfers={self.transfers})"
-        )
-
-    def __str__(self) -> str:
-        return f"Route {self.overview}: {self.duration_in_minutes} min transfers={self.transfers}"

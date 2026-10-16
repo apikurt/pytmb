@@ -1,0 +1,29 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:23:35.557533+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "planner/plan",
+  "query": {
+    "fromPlace": "41.3755204,2.1498870",
+    "toPlace": "0.0,0.0",
+    "date": "10-16-2026",
+    "time": "12:00pm",
+    "arriveBy": "false",
+    "mode": "WALK"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 01:23:34 GMT"
+  },
+  "payload_file": "planner_empty.json",
+  "model": "planner",
+  "outcome": "success",
+  "note": "Destination outside planner coverage produced HTTP 200 with a plan and an empty itinerary list, not an application error",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

@@ -1,0 +1,25 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:20:47.871197+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "transit/linies/metro",
+  "query": {
+    "filter": "CODI_LINIA=1",
+    "srsName": "EPSG:4326"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Fri, 16 Oct 2026 01:20:47 GMT"
+  },
+  "payload_file": "metro_lines.json",
+  "model": "lines",
+  "outcome": "success",
+  "note": "Public metro line L1; geographic CRS; server-side line filter",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

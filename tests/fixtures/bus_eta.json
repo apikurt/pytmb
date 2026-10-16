@@ -1,0 +1,138 @@
+{
+  "timestamp": 1792113521481,
+  "parades": [
+    {
+      "codi_parada": "108",
+      "nom_parada": "Pl Espanya - FGC",
+      "linies_trajectes": [
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N16",
+          "nom_linia": "N16",
+          "id_sentit": 1,
+          "codi_trajecte": "N16-Castelldefels",
+          "desti_trajecte": "Castelldefels",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792113552000
+            },
+            {
+              "temps_arribada": 1792114687000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N13",
+          "nom_linia": "N13",
+          "id_sentit": 1,
+          "codi_trajecte": "N13-Sant Boi",
+          "desti_trajecte": "Sant Boi",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792113595000
+            },
+            {
+              "temps_arribada": 1792114879000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N15",
+          "nom_linia": "N15",
+          "id_sentit": 1,
+          "codi_trajecte": "N15-Sant Joan Despí",
+          "desti_trajecte": "Sant Joan Despí",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792113632000
+            },
+            {
+              "temps_arribada": 1792114416000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N17",
+          "nom_linia": "N17",
+          "id_sentit": 1,
+          "codi_trajecte": "N17-Aeroport T1",
+          "desti_trajecte": "Aeroport T1",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792114087000
+            },
+            {
+              "temps_arribada": 1792114989000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N20",
+          "nom_linia": "N20",
+          "id_sentit": 1,
+          "codi_trajecte": "N20-Sant Boi",
+          "desti_trajecte": "Sant Boi",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792114875000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "N1",
+          "nom_linia": "N1",
+          "id_sentit": 2,
+          "codi_trajecte": "N1-Mercabarna",
+          "desti_trajecte": "Mercabarna",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792116109000
+            },
+            {
+              "temps_arribada": 1792116175000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L72",
+          "nom_linia": "L72",
+          "id_sentit": 1,
+          "codi_trajecte": "L72-St. Boi L.",
+          "desti_trajecte": "St. Boi L.",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792120449000
+            }
+          ]
+        },
+        {
+          "id_operador": 6,
+          "transit_namespace": "amb",
+          "codi_linia": "L70",
+          "nom_linia": "L70",
+          "id_sentit": 1,
+          "codi_trajecte": "L70-St. Boi L.",
+          "desti_trajecte": "St. Boi L.",
+          "propers_busos": [
+            {
+              "temps_arribada": 1792121029000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:18:42.179949+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "itransit/bus/parades/108",
+  "query": {},
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 01:18:41 GMT"
+  },
+  "payload_file": "bus_eta.json",
+  "model": "bus_eta",
+  "outcome": "success",
+  "note": "Public stop 108, Pl Espanya - FGC; live prediction snapshot",
+  "initial_model_validation": {
+    "passed": false,
+    "errors": [
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          0,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          0,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          0,
+          "propers_busos",
+          1,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          1,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          1,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          1,
+          "propers_busos",
+          1,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          2,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          2,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          2,
+          "propers_busos",
+          1,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          3,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          3,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          3,
+          "propers_busos",
+          1,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          4,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          4,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          5,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          5,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          5,
+          "propers_busos",
+          1,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          6,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          6,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      },
+      {
+        "type": "int_parsing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          7,
+          "codi_linia"
+        ],
+        "msg": "Input should be a valid integer, unable to parse string as an integer"
+      },
+      {
+        "type": "missing",
+        "loc": [
+          "parades",
+          0,
+          "linies_trajectes",
+          7,
+          "propers_busos",
+          0,
+          "id_bus"
+        ],
+        "msg": "Field required"
+      }
+    ]
+  },
+  "redacted_paths": []
+}

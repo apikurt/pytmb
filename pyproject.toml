@@ -1,37 +1,61 @@
 [project]
 name = "pytmb"
-version = "0.1.1b1"
+version = "0.2.0"
 description = "An unofficial python client for Barcelona public transport (TMB) API."
 readme = "README.md"
 authors = [
     { name = "Goktug Alperen Kurt", email = "244225901+apikurt@users.noreply.github.com" },
 ]
 requires-python = ">=3.10"
-dependencies = ["pydantic>=2.12.4", "requests>=2.32.5"]
+dependencies = [
+    "pydantic>=2.12.4",
+    "requests>=2.32.5",
+    "tzdata>=2025.2",
+]
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Operating System :: OS Independent",
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Utilities",
+    "Typing :: Typed",
 ]
 license = "MIT"
 license-files = ["LICENSE"]
 
 [project.urls]
 Homepage = "https://github.com/apikurt/pytmb"
+Documentation = "https://github.com/apikurt/pytmb/blob/main/API.md"
 Repository = "https://github.com/apikurt/pytmb"
 Issues = "https://github.com/apikurt/pytmb/issues"
 
 [build-system]
-requires = ["uv_build>=0.9.5,<0.10.0"]
+requires = ["uv_build>=0.12.0,<0.13.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = ["ruff>=0.14.5"]
+dev = [
+    "mypy>=1.18",
+    "pytest>=8",
+    "ruff>=0.14.5",
+    "types-requests>=2.32.4",
+]
 
 [tool.ruff]
 line-length = 120
-target-version = "py314"
+target-version = "py310"
+
+[tool.ruff.lint]
+# Keep the existing lint baseline explicit across Ruff's changing defaults.
+select = ["E4", "E7", "E9", "F"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/pytmb", "tests/typing_api.py"]
+check_untyped_defs = true

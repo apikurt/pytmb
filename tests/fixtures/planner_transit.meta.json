@@ -1,0 +1,30 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:22:23.090744+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "planner/plan",
+  "query": {
+    "fromPlace": "41.3755204,2.1498870",
+    "toPlace": "41.403629,2.174356",
+    "date": "10-16-2026",
+    "time": "12:00pm",
+    "arriveBy": "false",
+    "mode": "TRANSIT,WALK",
+    "showIntermediateStops": "true"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 01:22:22 GMT"
+  },
+  "payload_file": "planner_transit.json",
+  "model": "planner",
+  "outcome": "success",
+  "note": "Public landmarks Pl Espanya to Sagrada Familia; midday transit plan with intermediate stops",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

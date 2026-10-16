@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
+
+from pytmb.models._base import ResponseModel
 
 
-class Accessibility(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Accessibility(ResponseModel):
     ramp_status: str = Field(alias="estat_rampa")
 
     def __repr__(self):
@@ -15,9 +15,7 @@ class Accessibility(BaseModel):
         return f"Accessibility: ramp={self.ramp_status}"
 
 
-class BusInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class BusInfo(ResponseModel):
     accessibility: Accessibility | None = Field(default=None, alias="accessibilitat")
 
     def __repr__(self):
@@ -29,11 +27,9 @@ class BusInfo(BaseModel):
         return "BusInfo: accessibility=none"
 
 
-class Bus(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class Bus(ResponseModel):
     arrival_time: int = Field(alias="temps_arribada")  # epoch milliseconds of predicted arrival
-    bus_id: int = Field(alias="id_bus")  # unique bus identifier
+    bus_id: int | None = Field(default=None, alias="id_bus")  # omitted when unavailable
     info: BusInfo | None = Field(default=None, alias="info_bus")
 
     def __repr__(self):
@@ -43,12 +39,10 @@ class Bus(BaseModel):
         return f"Bus {self.bus_id} arrival_epoch_ms={self.arrival_time} info={self.info}" if self.info else f"Bus {self.bus_id} arrival_epoch_ms={self.arrival_time}"
 
 
-class BusLineRoute(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class BusLineRoute(ResponseModel):
     operator_id: int = Field(alias="id_operador")
     transit_namespace: str = Field(alias="transit_namespace")  # "bus" (TMB) or "amb" (other AMB operator)
-    line_code: int = Field(alias="codi_linia")
+    line_code: int | str = Field(alias="codi_linia")  # operator-specific; AMB codes can be alphanumeric
     line_name: str = Field(alias="nom_linia")
     direction_id: int = Field(alias="id_sentit")  # 1 = outbound, 2 = return
     route_code: str = Field(alias="codi_trajecte")
@@ -65,9 +59,7 @@ class BusLineRoute(BaseModel):
         )
 
 
-class BusStop(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class BusStop(ResponseModel):
     stop_code: str = Field(alias="codi_parada")
     stop_name: str = Field(alias="nom_parada")
     line_routes: list[BusLineRoute] = Field(default_factory=list, alias="linies_trajectes")
@@ -79,41 +71,14 @@ class BusStop(BaseModel):
         return f"Stop {self.stop_code} {self.stop_name} routes={len(self.line_routes)}"
 
 
-class BusEtaResponse(BaseModel):
+class BusEtaResponse(ResponseModel):
     """Response model for the Bus ETA API."""
 
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
     timestamp: int  # epoch milliseconds when the query was executed
-    stops: list[BusStop] = Field(default_factory=list, alias="parades")
+    stops: list[BusStop] = Field(alias="parades")
 
     def __repr__(self):
         return f"BusEtaResponse(timestamp={self.timestamp}, stops={self.stops})"
 
     def __str__(self):
         return f"BusEtaResponse timestamp={self.timestamp} stops={len(self.stops)}"
-
-
-# other models for the iBusClient methods
-class BusEtaInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
-    line_code: int
-    line_name: str
-    destination: str
-    eta_minutes: int
-    stop_code: str
-    ramp_status: str | None = None
-
-    def __repr__(self):
-        return (
-            f"BusEtaInfo(line_code={self.line_code}, line_name={self.line_name}, "
-            f"destination={self.destination}, eta_minutes={self.eta_minutes}, stop_code={self.stop_code}, ramp_status={self.ramp_status})"
-        )
-
-    def __str__(self):
-        return (
-            f"Bus {self.line_name} ({self.line_code}) to {self.destination}: {self.eta_minutes} min "
-            f"stop={self.stop_code} ramp={self.ramp_status}" if self.ramp_status is not None else
-            f"Bus {self.line_name} ({self.line_code}) to {self.destination}: {self.eta_minutes} min stop={self.stop_code}"
-        )

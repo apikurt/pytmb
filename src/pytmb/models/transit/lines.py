@@ -3,14 +3,13 @@ from __future__ import annotations
 from datetime import date
 from typing import Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import Field
 
-from pytmb.models.TransitModels.geo import FeatureCollection
+from pytmb.models._base import DomainModel, ResponseModel
+from pytmb.models.transit.geo import FeatureCollection
 
 
-class LineProperties(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class LineProperties(ResponseModel):
     # Codes and identifiers
     family_code: int = Field(alias="CODI_FAMILIA")
     line_code: int = Field(alias="CODI_LINIA")
@@ -61,9 +60,7 @@ class LinesResponse(FeatureCollection[LineProperties]):
     pass
 
 
-class LineInfo(BaseModel):
-    model_config = ConfigDict(extra="ignore", populate_by_name=True)
-
+class LineInfo(DomainModel):
     line_id: int
     line_code: int
     line_name: str

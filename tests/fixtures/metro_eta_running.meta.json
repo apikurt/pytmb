@@ -1,0 +1,24 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T09:38:57.460492+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "itransit/metro/estacions",
+  "query": {
+    "estacions": "123,115"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Date": "Fri, 16 Oct 2026 09:38:56 GMT"
+  },
+  "payload_file": "metro_eta_running.json",
+  "model": "metro_eta",
+  "outcome": "success",
+  "note": "Operating-hours L1 predictions at public stations Rocafort (123) and Can Serra (115)",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

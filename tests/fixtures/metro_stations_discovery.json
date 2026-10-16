@@ -1,0 +1,1185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ea9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.10275752,
+          41.36769401
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 121,
+        "CODI_ESTACIO_LINIA": 115,
+        "ID_GRUP_ESTACIO": 115,
+        "CODI_GRUP_ESTACIO": 6660115,
+        "ID_ESTACIO": 35,
+        "CODI_ESTACIO": 115,
+        "NOM_ESTACIO": "Can Serra",
+        "ORDRE_ESTACIO": 5,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1987-04-23Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eaa",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.15456248,
+          41.37923215
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 198,
+        "CODI_ESTACIO_LINIA": 123,
+        "ID_GRUP_ESTACIO": 123,
+        "CODI_GRUP_ESTACIO": 6660123,
+        "ID_ESTACIO": 121,
+        "CODI_ESTACIO": 123,
+        "NOM_ESTACIO": "Rocafort",
+        "ORDRE_ESTACIO": 13,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eab",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18116467,
+          41.39233666
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 209,
+        "CODI_ESTACIO_LINIA": 128,
+        "ID_GRUP_ESTACIO": 128,
+        "CODI_GRUP_ESTACIO": 6660128,
+        "ID_ESTACIO": 134,
+        "CODI_ESTACIO": 128,
+        "NOM_ESTACIO": "Arc de Triomf",
+        "ORDRE_ESTACIO": 18,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1933-06-30Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eac",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.19067063,
+          41.44322471
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 95,
+        "CODI_ESTACIO_LINIA": 136,
+        "ID_GRUP_ESTACIO": 136,
+        "CODI_GRUP_ESTACIO": 6660136,
+        "ID_ESTACIO": 9,
+        "CODI_ESTACIO": 136,
+        "NOM_ESTACIO": "Torras i Bages",
+        "ORDRE_ESTACIO": 26,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1968-03-13Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ead",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.14329127,
+          41.37525363
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 96,
+        "CODI_ESTACIO_LINIA": 121,
+        "ID_GRUP_ESTACIO": 121,
+        "CODI_GRUP_ESTACIO": 6660121,
+        "ID_ESTACIO": 10,
+        "CODI_ESTACIO": 121,
+        "NOM_ESTACIO": "Hostafrancs",
+        "ORDRE_ESTACIO": 11,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eae",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.110917,
+          41.35097554
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 119,
+        "CODI_ESTACIO_LINIA": 112,
+        "ID_GRUP_ESTACIO": 112,
+        "CODI_GRUP_ESTACIO": 6660112,
+        "ID_ESTACIO": 33,
+        "CODI_ESTACIO": 112,
+        "NOM_ESTACIO": "Bellvitge",
+        "ORDRE_ESTACIO": 2,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1989-10-17Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eaf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.11002737,
+          41.36831605
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 122,
+        "CODI_ESTACIO_LINIA": 116,
+        "ID_GRUP_ESTACIO": 116,
+        "CODI_GRUP_ESTACIO": 6660116,
+        "ID_ESTACIO": 36,
+        "CODI_ESTACIO": 116,
+        "NOM_ESTACIO": "Florida",
+        "ORDRE_ESTACIO": 6,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1987-04-23Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.12861726,
+          41.36881637
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 123,
+        "CODI_ESTACIO_LINIA": 118,
+        "ID_GRUP_ESTACIO": 118,
+        "CODI_GRUP_ESTACIO": 6660118,
+        "ID_ESTACIO": 37,
+        "CODI_ESTACIO": 118,
+        "NOM_ESTACIO": "Santa Eulàlia",
+        "ORDRE_ESTACIO": 8,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1983-12-22Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.15889091,
+          41.3824874
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 124,
+        "CODI_ESTACIO_LINIA": 124,
+        "ID_GRUP_ESTACIO": 124,
+        "CODI_GRUP_ESTACIO": 6660124,
+        "ID_ESTACIO": 38,
+        "CODI_ESTACIO": 124,
+        "NOM_ESTACIO": "Urgell",
+        "ORDRE_ESTACIO": 14,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1493825,
+          41.37551004
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 125,
+        "CODI_ESTACIO_LINIA": 122,
+        "ID_GRUP_ESTACIO": 122,
+        "CODI_GRUP_ESTACIO": 6660122,
+        "ID_ESTACIO": 39,
+        "CODI_ESTACIO": 122,
+        "NOM_ESTACIO": "Espanya",
+        "ORDRE_ESTACIO": 12,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 3,
+        "NOM_TIPUS_ACCESSIBILITAT": "No accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.17456658,
+          41.38963643
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 126,
+        "CODI_ESTACIO_LINIA": 127,
+        "ID_GRUP_ESTACIO": 127,
+        "CODI_GRUP_ESTACIO": 6660127,
+        "ID_ESTACIO": 40,
+        "CODI_ESTACIO": 127,
+        "NOM_ESTACIO": "Urquinaona",
+        "ORDRE_ESTACIO": 17,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 3,
+        "NOM_TIPUS_ACCESSIBILITAT": "No accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1933-06-30Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18753747,
+          41.40227722
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 127,
+        "CODI_ESTACIO_LINIA": 130,
+        "ID_GRUP_ESTACIO": 130,
+        "CODI_GRUP_ESTACIO": 6660130,
+        "ID_ESTACIO": 41,
+        "CODI_ESTACIO": 130,
+        "NOM_ESTACIO": "Glòries",
+        "ORDRE_ESTACIO": 20,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1951-06-22Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18366143,
+          41.4296326
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 128,
+        "CODI_ESTACIO_LINIA": 134,
+        "ID_GRUP_ESTACIO": 134,
+        "CODI_GRUP_ESTACIO": 6660134,
+        "ID_ESTACIO": 42,
+        "CODI_ESTACIO": 134,
+        "NOM_ESTACIO": "Fabra i Puig",
+        "ORDRE_ESTACIO": 24,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1954-05-14Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18700271,
+          41.41016343
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 148,
+        "CODI_ESTACIO_LINIA": 131,
+        "ID_GRUP_ESTACIO": 131,
+        "CODI_GRUP_ESTACIO": 6660131,
+        "ID_ESTACIO": 62,
+        "CODI_ESTACIO": 131,
+        "NOM_ESTACIO": "Clot",
+        "ORDRE_ESTACIO": 21,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1951-06-22Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.20796946,
+          41.45106735
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 149,
+        "CODI_ESTACIO_LINIA": 139,
+        "ID_GRUP_ESTACIO": 139,
+        "CODI_GRUP_ESTACIO": 6660139,
+        "ID_ESTACIO": 63,
+        "CODI_ESTACIO": 139,
+        "NOM_ESTACIO": "Santa Coloma",
+        "ORDRE_ESTACIO": 29,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1983-12-20Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.10724192,
+          41.34467731
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 167,
+        "CODI_ESTACIO_LINIA": 111,
+        "ID_GRUP_ESTACIO": 111,
+        "CODI_GRUP_ESTACIO": 6660111,
+        "ID_ESTACIO": 81,
+        "CODI_ESTACIO": 111,
+        "NOM_ESTACIO": "Hospital de Bellvitge",
+        "ORDRE_ESTACIO": 1,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1989-10-17Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eb9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.09974934,
+          41.36408991
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 168,
+        "CODI_ESTACIO_LINIA": 114,
+        "ID_GRUP_ESTACIO": 114,
+        "CODI_GRUP_ESTACIO": 6660114,
+        "ID_ESTACIO": 82,
+        "CODI_ESTACIO": 114,
+        "NOM_ESTACIO": "Rambla Just Oliveras",
+        "ORDRE_ESTACIO": 4,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1987-04-23Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1eba",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.11659379,
+          41.36839566
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 169,
+        "CODI_ESTACIO_LINIA": 117,
+        "ID_GRUP_ESTACIO": 117,
+        "CODI_GRUP_ESTACIO": 6660117,
+        "ID_ESTACIO": 83,
+        "CODI_ESTACIO": 117,
+        "NOM_ESTACIO": "Torrassa",
+        "ORDRE_ESTACIO": 7,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1983-12-22Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L9SL10S"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ebb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.16428386,
+          41.3858149
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 171,
+        "CODI_ESTACIO_LINIA": 125,
+        "ID_GRUP_ESTACIO": 125,
+        "CODI_GRUP_ESTACIO": 6660125,
+        "ID_ESTACIO": 85,
+        "CODI_ESTACIO": 125,
+        "NOM_ESTACIO": "Universitat",
+        "ORDRE_ESTACIO": 15,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ebc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18580103,
+          41.39472529
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 172,
+        "CODI_ESTACIO_LINIA": 129,
+        "ID_GRUP_ESTACIO": 129,
+        "CODI_GRUP_ESTACIO": 6660129,
+        "ID_ESTACIO": 86,
+        "CODI_ESTACIO": 129,
+        "NOM_ESTACIO": "Marina",
+        "ORDRE_ESTACIO": 19,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1933-03-31Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ebd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18697533,
+          41.42236877
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 173,
+        "CODI_ESTACIO_LINIA": 133,
+        "ID_GRUP_ESTACIO": 133,
+        "CODI_GRUP_ESTACIO": 6660133,
+        "ID_ESTACIO": 87,
+        "CODI_ESTACIO": 133,
+        "NOM_ESTACIO": "La Sagrera",
+        "ORDRE_ESTACIO": 23,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1954-01-26Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L5L9NL10N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ebe",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.19956302,
+          41.449936
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 175,
+        "CODI_ESTACIO_LINIA": 138,
+        "ID_GRUP_ESTACIO": 138,
+        "CODI_GRUP_ESTACIO": 6660138,
+        "ID_ESTACIO": 89,
+        "CODI_ESTACIO": 138,
+        "NOM_ESTACIO": "Baró de Viver",
+        "ORDRE_ESTACIO": 28,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1983-12-20Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ebf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13815393,
+          41.37535307
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 201,
+        "CODI_ESTACIO_LINIA": 120,
+        "ID_GRUP_ESTACIO": 120,
+        "CODI_GRUP_ESTACIO": 6660120,
+        "ID_ESTACIO": 124,
+        "CODI_ESTACIO": 120,
+        "NOM_ESTACIO": "Plaça de Sants",
+        "ORDRE_ESTACIO": 10,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 3,
+        "NOM_TIPUS_ACCESSIBILITAT": "No accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L5"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec0",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.13353578,
+          41.3730027
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 205,
+        "CODI_ESTACIO_LINIA": 119,
+        "ID_GRUP_ESTACIO": 119,
+        "CODI_GRUP_ESTACIO": 6660119,
+        "ID_ESTACIO": 128,
+        "CODI_ESTACIO": 119,
+        "NOM_ESTACIO": "Mercat Nou",
+        "ORDRE_ESTACIO": 9,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.21843513,
+          41.45158315
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 214,
+        "CODI_ESTACIO_LINIA": 140,
+        "ID_GRUP_ESTACIO": 140,
+        "CODI_GRUP_ESTACIO": 6660140,
+        "ID_ESTACIO": 139,
+        "CODI_ESTACIO": 140,
+        "NOM_ESTACIO": "Fondo",
+        "ORDRE_ESTACIO": 30,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1992-02-17Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L9N"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.10263153,
+          41.35855331
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 120,
+        "CODI_ESTACIO_LINIA": 113,
+        "ID_GRUP_ESTACIO": 113,
+        "CODI_GRUP_ESTACIO": 6660113,
+        "ID_ESTACIO": 34,
+        "CODI_ESTACIO": 113,
+        "NOM_ESTACIO": "Av. Carrilet",
+        "ORDRE_ESTACIO": 3,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1987-04-23Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.19383728,
+          41.44895649
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 129,
+        "CODI_ESTACIO_LINIA": 137,
+        "ID_GRUP_ESTACIO": 137,
+        "CODI_GRUP_ESTACIO": 6660137,
+        "ID_ESTACIO": 43,
+        "CODI_ESTACIO": 137,
+        "NOM_ESTACIO": "Trinitat Vella",
+        "ORDRE_ESTACIO": 27,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1983-12-20Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.19118689,
+          41.43660044
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 174,
+        "CODI_ESTACIO_LINIA": 135,
+        "ID_GRUP_ESTACIO": 135,
+        "CODI_GRUP_ESTACIO": 6660135,
+        "ID_ESTACIO": 88,
+        "CODI_ESTACIO": 135,
+        "NOM_ESTACIO": "Sant Andreu",
+        "ORDRE_ESTACIO": 25,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1968-03-13Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.18705678,
+          41.41618671
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 130,
+        "CODI_ESTACIO_LINIA": 132,
+        "ID_GRUP_ESTACIO": 132,
+        "CODI_GRUP_ESTACIO": 6660132,
+        "ID_ESTACIO": 44,
+        "CODI_ESTACIO": 132,
+        "NOM_ESTACIO": "Navas",
+        "ORDRE_ESTACIO": 22,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1953-05-07Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ESTACIONS_LINIA.fid--3568b862_1a14222345c_1ec6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1689946,
+          41.38748943
+        ]
+      },
+      "geometry_name": "GEOMETRY",
+      "properties": {
+        "ID_ESTACIO_LINIA": 170,
+        "CODI_ESTACIO_LINIA": 126,
+        "ID_GRUP_ESTACIO": 126,
+        "CODI_GRUP_ESTACIO": 6660126,
+        "ID_ESTACIO": 84,
+        "CODI_ESTACIO": 126,
+        "NOM_ESTACIO": "Catalunya",
+        "ORDRE_ESTACIO": 16,
+        "ID_LINIA": 4,
+        "CODI_LINIA": 1,
+        "NOM_LINIA": "L1",
+        "ORDRE_LINIA": 1,
+        "ID_TIPUS_SERVEI": 1,
+        "DESC_SERVEI": "Hospital de Bellvitge - Fondo",
+        "ORIGEN_SERVEI": "Hospital de Bellvitge",
+        "DESTI_SERVEI": "Fondo",
+        "ID_TIPUS_ACCESSIBILITAT": 1,
+        "NOM_TIPUS_ACCESSIBILITAT": "Accessible",
+        "ID_TIPUS_ESTAT": 1,
+        "NOM_TIPUS_ESTAT": "Operatiu",
+        "DATA_INAUGURACIO": "1926-06-09Z",
+        "DATA": "2026-10-15Z",
+        "COLOR_LINIA": "CE1126",
+        "PICTO": "L1",
+        "PICTO_GRUP": "L1L3"
+      }
+    }
+  ],
+  "totalFeatures": 30,
+  "numberMatched": 30,
+  "numberReturned": 30,
+  "timeStamp": "2026-10-16T01:20:47.571Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  }
+}

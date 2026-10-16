@@ -1,0 +1,24 @@
+{
+  "provenance": "live_api_capture",
+  "captured_at": "2026-10-16T01:22:22.818813+00:00",
+  "api_version": "v1",
+  "method": "GET",
+  "endpoint": "transit/linies/bus/23/recs",
+  "query": {
+    "srsName": "EPSG:25831"
+  },
+  "status_code": 200,
+  "response_headers": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Fri, 16 Oct 2026 01:22:22 GMT"
+  },
+  "payload_file": "bus_routes_projected.json",
+  "model": "bus_routes",
+  "outcome": "success",
+  "note": "Public bus line 23 detailed routes in projected CRS EPSG:25831",
+  "initial_model_validation": {
+    "passed": true,
+    "errors": []
+  },
+  "redacted_paths": []
+}

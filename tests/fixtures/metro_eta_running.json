@@ -1,0 +1,106 @@
+{
+  "timestamp": 1792143536618,
+  "linies": [
+    {
+      "codi_linia": 1,
+      "nom_linia": "L1",
+      "nom_familia": "Metro",
+      "codi_familia": 1,
+      "color_linia": "CE1126",
+      "estacions": [
+        {
+          "codi_via": 1,
+          "id_sentit": 1,
+          "codi_estacio": 115,
+          "linies_trajectes": [
+            {
+              "codi_linia": 1,
+              "nom_linia": "L1",
+              "color_linia": "CE1126",
+              "codi_trajecte": "0011",
+              "desti_trajecte": "Fondo",
+              "propers_trens": [
+                {
+                  "codi_servei": "129",
+                  "temps_arribada": 1792143763000
+                },
+                {
+                  "codi_servei": "130",
+                  "temps_arribada": 1792143936000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "codi_via": 2,
+          "id_sentit": 2,
+          "codi_estacio": 115,
+          "linies_trajectes": [
+            {
+              "codi_linia": 1,
+              "nom_linia": "L1",
+              "color_linia": "CE1126",
+              "codi_trajecte": "0012",
+              "desti_trajecte": "Hospital de Bellvitge",
+              "propers_trens": [
+                {
+                  "codi_servei": "133",
+                  "temps_arribada": 1792143729000
+                },
+                {
+                  "codi_servei": "135",
+                  "temps_arribada": 1792144004000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "codi_via": 1,
+          "id_sentit": 1,
+          "codi_estacio": 123,
+          "linies_trajectes": [
+            {
+              "codi_linia": 1,
+              "nom_linia": "L1",
+              "color_linia": "CE1126",
+              "codi_trajecte": "0011",
+              "desti_trajecte": "Fondo",
+              "propers_trens": [
+                {
+                  "codi_servei": "125",
+                  "temps_arribada": 1792143708000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "codi_via": 2,
+          "id_sentit": 2,
+          "codi_estacio": 123,
+          "linies_trajectes": [
+            {
+              "codi_linia": 1,
+              "nom_linia": "L1",
+              "color_linia": "CE1126",
+              "codi_trajecte": "0012",
+              "desti_trajecte": "Hospital de Bellvitge",
+              "propers_trens": [
+                {
+                  "codi_servei": "101",
+                  "temps_arribada": 1792143598000
+                },
+                {
+                  "codi_servei": "103",
+                  "temps_arribada": 1792143771000
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

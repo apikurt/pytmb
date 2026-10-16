@@ -1,0 +1,49 @@
+{
+  "requestParameters": {
+    "date": "10-16-2026",
+    "mode": "WALK",
+    "arriveBy": "false",
+    "showIntermediateStops": "true",
+    "fromPlace": "41.375520,2.149887",
+    "toPlace": "0.000000,0.000000",
+    "time": "12:00pm"
+  },
+  "plan": {
+    "date": 1792144800000,
+    "from": {
+      "name": "Origin",
+      "lon": 2.149887,
+      "lat": 41.37552,
+      "vertexType": "NORMAL"
+    },
+    "to": {
+      "name": "Destination",
+      "lon": 0,
+      "lat": 0,
+      "vertexType": "NORMAL"
+    },
+    "itineraries": []
+  },
+  "debugOutput": {
+    "precalculationTime": 21830,
+    "directStreetRouterTime": 10777839,
+    "transitRouterTime": 10369853,
+    "filteringTime": 96096,
+    "renderingTime": 28018,
+    "totalTime": 11233438,
+    "transitRouterTimes": {
+      "tripPatternFilterTime": 0,
+      "accessEgressTime": 0,
+      "raptorSearchTime": 0,
+      "itineraryCreationTime": 0
+    }
+  },
+  "elevationMetadata": {
+    "ellipsoidToGeoidDifference": 48.71688650994868,
+    "geoidElevation": false
+  },
+  "zonesBaDMetadata": {
+    "fromInZone": null,
+    "toInZone": null
+  }
+}
