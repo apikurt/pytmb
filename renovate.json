@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "automerge": false,
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "description": "Group Python dependency updates",
+      "matchManagers": ["uv"],
+      "groupName": "Python dependencies"
+    },
+    {
+      "description": "Group GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    }
+  ],
+  "schedule": ["every weekend"],
+  "labels": ["dependencies"],
+  "branchPrefix": "deps/",
+  "commitMessagePrefix": "chore(deps): ",
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "minimumReleaseAge": "3 days"
+}
